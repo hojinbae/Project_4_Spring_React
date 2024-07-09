@@ -25,7 +25,8 @@ function QaBoardDetail(props){
         setResultQue(result.data);
         setBoardLike(result.data.qaboard.likes)
         console.log("::::::::::쿼리문?"+resultQue);
-        resultQue ? setTrueResult(true) : setTrueResult(false)
+        setTrueResult(!!result.data);
+        // resultQue ? setTrueResult(true) : setTrueResult(false)
         console.log( result.data)
         scrollToTop();
     };
