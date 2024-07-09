@@ -1,0 +1,74 @@
+--------------------------------------------------------
+--  파일이 생성됨 - 화요일-7월-09-2024   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table QA
+--------------------------------------------------------
+
+  CREATE TABLE "BAE"."QA" 
+   (	"QAID" NUMBER, 
+	"USERID" VARCHAR2(255 BYTE), 
+	"TITLE" VARCHAR2(4000 BYTE), 
+	"CREATED_AT" TIMESTAMP (6), 
+	"CONTENT" CLOB, 
+	"VIEWS" NUMBER, 
+	"LIKES" NUMBER, 
+	"IMAGEPATH" VARCHAR2(255 BYTE), 
+	"IMAGENAME" VARCHAR2(200 BYTE), 
+	"FESTIVALID" NUMBER
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" 
+ LOB ("CONTENT") STORE AS BASICFILE (
+  TABLESPACE "USERS" ENABLE STORAGE IN ROW CHUNK 8192 RETENTION 
+  NOCACHE LOGGING 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)) ;
+REM INSERTING into BAE.QA
+SET DEFINE OFF;
+Insert into BAE.QA (QAID,USERID,TITLE,CREATED_AT,VIEWS,LIKES,IMAGEPATH,IMAGENAME,FESTIVALID) values (1,'admin','2024 지금여기 금정 관광후기 이벤트',to_timestamp('24/05/03 18:11:03.031000000','RR/MM/DD HH24:MI:SSXFF'),0,0,'C:\JSKim\Project\2_WebProject\codelapboard\routes\temp\f5f9f220d1910d5d323b4dca7eb642a5','f5f9f220d1910d5d323b4dca7eb642a5',70);
+Insert into BAE.QA (QAID,USERID,TITLE,CREATED_AT,VIEWS,LIKES,IMAGEPATH,IMAGENAME,FESTIVALID) values (2,'admin','황영조 국제 마라톤 대회',to_timestamp('24/05/03 18:11:23.313000000','RR/MM/DD HH24:MI:SSXFF'),0,0,'C:\JSKim\Project\2_WebProject\codelapboard\routes\temp\91c1560651878efff04a39abd786398d','91c1560651878efff04a39abd786398d',168);
+Insert into BAE.QA (QAID,USERID,TITLE,CREATED_AT,VIEWS,LIKES,IMAGEPATH,IMAGENAME,FESTIVALID) values (3,'admin','백운산국사봉철쭉제',to_timestamp('24/05/03 18:11:56.891000000','RR/MM/DD HH24:MI:SSXFF'),1,0,'C:\JSKim\Project\2_WebProject\codelapboard\routes\temp\77b5656b0625b6293186140b9fdf2caf','77b5656b0625b6293186140b9fdf2caf',282);
+Insert into BAE.QA (QAID,USERID,TITLE,CREATED_AT,VIEWS,LIKES,IMAGEPATH,IMAGENAME,FESTIVALID) values (4,'admin','어천절대제전',to_timestamp('24/05/03 18:12:14.627000000','RR/MM/DD HH24:MI:SSXFF'),1,0,'C:\JSKim\Project\2_WebProject\codelapboard\routes\temp\444079f5f8d58712600de206a172279a','444079f5f8d58712600de206a172279a',432);
+Insert into BAE.QA (QAID,USERID,TITLE,CREATED_AT,VIEWS,LIKES,IMAGEPATH,IMAGENAME,FESTIVALID) values (5,'admin','제45회서울연극제',to_timestamp('24/05/03 18:12:44.832000000','RR/MM/DD HH24:MI:SSXFF'),1,0,'C:\JSKim\Project\2_WebProject\codelapboard\routes\temp\3174ec75213edc2ccc71b6e39e3ecda3','3174ec75213edc2ccc71b6e39e3ecda3',439);
+Insert into BAE.QA (QAID,USERID,TITLE,CREATED_AT,VIEWS,LIKES,IMAGEPATH,IMAGENAME,FESTIVALID) values (6,'admin','제18회 청계산 철쭉축제',to_timestamp('24/05/03 18:13:18.158000000','RR/MM/DD HH24:MI:SSXFF'),0,0,'C:\JSKim\Project\2_WebProject\codelapboard\routes\temp\2f53b182e2b02dc298b3a8f4d50e3235','2f53b182e2b02dc298b3a8f4d50e3235',801);
+Insert into BAE.QA (QAID,USERID,TITLE,CREATED_AT,VIEWS,LIKES,IMAGEPATH,IMAGENAME,FESTIVALID) values (7,'admin','청소년오케스트라 음악소풍',to_timestamp('24/05/03 18:13:51.918000000','RR/MM/DD HH24:MI:SSXFF'),0,0,'C:\JSKim\Project\2_WebProject\codelapboard\routes\temp\aecc02eec82666fcb694cbd2c9fafa9a','aecc02eec82666fcb694cbd2c9fafa9a',741);
+--------------------------------------------------------
+--  DDL for Index SYS_C007345
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "BAE"."SYS_C007345" ON "BAE"."QA" ("QAID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  Constraints for Table QA
+--------------------------------------------------------
+
+  ALTER TABLE "BAE"."QA" ADD PRIMARY KEY ("QAID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table QA
+--------------------------------------------------------
+
+  ALTER TABLE "BAE"."QA" ADD CONSTRAINT "FESTIVAL_ID" FOREIGN KEY ("FESTIVALID")
+	  REFERENCES "BAE"."FESTIVALS" ("FESTIVALID") ENABLE;
+  ALTER TABLE "BAE"."QA" ADD CONSTRAINT "USERID" FOREIGN KEY ("USERID")
+	  REFERENCES "BAE"."USERS" ("ID") ENABLE;
+
+
+
+--------------------------------------------------------
+--  파일이 생성됨 - 화요일-7월-09-2024   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Sequence QAID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "BAE"."QAID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 14 NOCACHE  NOORDER  NOCYCLE ;
